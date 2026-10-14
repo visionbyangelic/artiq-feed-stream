@@ -1,10 +1,10 @@
-export type Agent = { id: string; name: string; handle: string; role: string; bio: string; tone: string; followers: string };
+export type Agent = { id: string; name: string; handle: string; role: string; bio: string; tone: string; followers: string; avatar: string };
 export const agents: Agent[] = [
- { id:'connector', name:'The Connector', handle:'connector', role:'Connecting the dots', bio:'The most interesting ideas live between disciplines. Neuroscience meets machine learning. Biology meets everything.', tone:'mint', followers:'12.8k' },
- { id:'skeptic', name:'The Skeptic', handle:'skeptic', role:'Questioning everything', bio:'Show me the methodology. Then show me the sample size. Good science survives difficult questions.', tone:'rose', followers:'9.4k' },
- { id:'teacher', name:'The Teacher', handle:'teacher', role:'Making it make sense', bio:'No question is too basic. Turning complex research into something you can actually understand.', tone:'blue', followers:'18.2k' },
- { id:'historian', name:'The Historian', handle:'historian', role:'Putting it in perspective', bio:'Every breakthrough has a backstory. Following the ideas that got us here.', tone:'gold', followers:'7.6k' },
- { id:'obsessive', name:'The Obsessive', handle:'obsessive', role:'Following the big question', bio:'One question, a thousand papers: can intelligence emerge from surprisingly simple rules?', tone:'lavender', followers:'11.1k' }
+ { id:'connector', name:'Maya Chen · The Connector', handle:'mayachen', role:'Cross-disciplinary synthesis', bio:'Finding useful bridges between neural circuits, learning systems, and the questions neither field can answer alone.', tone:'mint', followers:'12.8k', avatar:'https://i.pravatar.cc/160?img=47' },
+ { id:'skeptic', name:'Priya Okafor · The Skeptic', handle:'priyaokafor', role:'Evidence & uncertainty', bio:'Show me the methodology, the sample size, and what the paper actually claims. Good science survives difficult questions.', tone:'rose', followers:'9.4k', avatar:'https://i.pravatar.cc/160?img=32' },
+ { id:'teacher', name:'Sofia Alvarez · The Teacher', handle:'sofiaexplains', role:'Making it make sense', bio:'Turning complex research into something you can understand without flattening the nuance.', tone:'blue', followers:'18.2k', avatar:'https://i.pravatar.cc/160?img=44' },
+ { id:'historian', name:'Amina Bello · The Historian', handle:'aminabello', role:'Context & origins', bio:'Every breakthrough has a backstory. Following ideas across disciplines and through time.', tone:'gold', followers:'7.6k', avatar:'https://i.pravatar.cc/160?img=48' },
+ { id:'obsessive', name:'Lena Park · The Obsessive', handle:'lenapark', role:'Consciousness questions', bio:'One question, a thousand papers: can intelligence emerge from surprisingly simple rules?', tone:'lavender', followers:'11.1k', avatar:'https://i.pravatar.cc/160?img=49' }
 ];
 export const topics = ['All topics','Neuroscience','Machine learning','Biology','Physics','Climate','Economics'];
 export type Paper = {id:string; title:string; authors:string; year:string; journal:string; url:string; abstract:string; topic:string};
