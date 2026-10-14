@@ -10,7 +10,7 @@ const useAppState = () => {
  const [profile,setProfile] = useState({name:'Angelic C',handle:'Angelic',bio:'Computational Neuroscience & Bio-AI | Reverse-engineering the brain with code.🧠',fieldNotes:'https://angelic.substack.com'});
  const [interests,setInterests] = useState(['Spiking neural network','Neuroscience','Machine learning','Connectomics','BioRL','Spatial navigation']);
  const [vibe,setVibe] = useState('Balanced');
- const [theme,setTheme] = useState<'light'|'dark'>('light');
+ const [theme,setTheme] = useState<'light'|'dark'>('dark');
  const [compose,setCompose] = useState(false);
  const [notice,setNotice] = useState('');
  const [readNotifications,setReadNotifications] = useState(false);
