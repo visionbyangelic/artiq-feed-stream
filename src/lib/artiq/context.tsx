@@ -7,7 +7,7 @@ const useAppState = () => {
  const [savedPapers,setSavedPapers] = useState<string[]>([]);
  const [following,setFollowing] = useState<string[]>(['connector','teacher']);
  const [customAgents,setCustomAgents] = useState<Agent[]>([]);
- const [profile,setProfile] = useState({name:'Angelic C',handle:'Angelic',bio:'Computational Neuroscience & Bio-AI | Reverse-engineering the brain with code.🧠',fieldNotes:'https://angelic.substack.com'});
+ const [profile,setProfile] = useState({name:'Angelic C',handle:'Angelic',bio:'Computational Neuroscience & Bio-AI | Reverse-engineering the brain with code.🧠',fieldNotes:''});
  const [interests,setInterests] = useState(['Spiking neural network','Neuroscience','Machine learning','Connectomics','BioRL','Spatial navigation']);
  const [vibe,setVibe] = useState('Balanced');
  const [theme,setTheme] = useState<'light'|'dark'>('dark');
