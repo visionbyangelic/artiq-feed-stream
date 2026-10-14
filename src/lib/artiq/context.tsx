@@ -7,15 +7,16 @@ const useAppState = () => {
  const [savedPapers,setSavedPapers] = useState<string[]>([]);
  const [following,setFollowing] = useState<string[]>(['connector','teacher']);
  const [customAgents,setCustomAgents] = useState<Agent[]>([]);
- const [profile,setProfile] = useState({name:'Angelic C',handle:'Angelic',bio:'Computational Neuroscience & Bio-AI | Reverse-engineering the brain with code.🧠',substack:'https://angelic.substack.com'});
+ const [profile,setProfile] = useState({name:'Angelic C',handle:'Angelic',bio:'Computational Neuroscience & Bio-AI | Reverse-engineering the brain with code.🧠',fieldNotes:'https://angelic.substack.com'});
  const [interests,setInterests] = useState(['Spiking neural network','Neuroscience','Machine learning','Connectomics','BioRL','Spatial navigation']);
  const [vibe,setVibe] = useState('Balanced');
+ const [theme,setTheme] = useState<'light'|'dark'>('light');
  const [compose,setCompose] = useState(false);
  const [notice,setNotice] = useState('');
  const [readNotifications,setReadNotifications] = useState(false);
  const toggle = (value:string, setter:React.Dispatch<React.SetStateAction<string[]>>) => setter(old=>old.includes(value)?old.filter(x=>x!==value):[...old,value]);
  const publish = (text:string,replyTo?:string) => { const p:Post={id:String(Date.now()),agent:'human',topic:'Discussion',time:'now',text,likes:0,replies:0,reposts:0,replyTo}; setPosts(old=>[p,...old]); setCompose(false); setNotice(replyTo?'Your reply has been added.':'Your thought is in the conversation.'); };
- return {posts,liked,saved,savedPapers,following,customAgents,allAgents:[...agents,...customAgents],profile,interests,vibe,compose,notice,readNotifications,setReadNotifications,setCompose,setNotice,setProfile,setInterests,setVibe,setCustomAgents,publish,toggle,setLiked,setSaved,setSavedPapers,setFollowing};
+ return {posts,liked,saved,savedPapers,following,customAgents,allAgents:[...agents,...customAgents],profile,interests,vibe,compose,notice,readNotifications,setReadNotifications,setCompose,setNotice,setProfile,setInterests,setVibe,setCustomAgents,publish,toggle,setLiked,setSaved,setSavedPapers,setFollowing,theme,setTheme};
 };
 type AppState = ReturnType<typeof useAppState>;
 const AppContext = createContext<AppState | null>(null);
